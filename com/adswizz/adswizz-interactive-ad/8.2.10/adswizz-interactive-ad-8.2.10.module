@@ -1,0 +1,115 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.adswizz",
+    "module": "adswizz-interactive-ad",
+    "version": "8.2.10",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.13"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "adswizz-interactive-ad-8.2.10.aar",
+          "url": "adswizz-interactive-ad-8.2.10.aar",
+          "size": 8291,
+          "sha512": "895e79a9a2747bc7b29f3a0e329e5b4218a9338c1fd730caf554dd2d4e888f5de6758151bc3cad957d8413db18fc163ba20671a951516573727540fc8601cd46",
+          "sha256": "8df4b79e5da0144a77fff80752bf0ce472e6ca1f0842402c3037fa71b5c05444",
+          "sha1": "997ceeeba81fd2797346c4acf1d25c6b821cfacf",
+          "md5": "5875904dfa7b29a80ffaa5a9c47b088c"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.adswizz",
+          "module": "adswizz-core",
+          "version": {
+            "requires": "8.2.10"
+          }
+        },
+        {
+          "group": "com.adswizz",
+          "module": "adswizz-common-internal",
+          "version": {
+            "requires": "8.2.10"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk7",
+          "version": {
+            "requires": "1.8.22"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.7.3"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-android",
+          "version": {
+            "requires": "1.7.3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "adswizz-interactive-ad-8.2.10.aar",
+          "url": "adswizz-interactive-ad-8.2.10.aar",
+          "size": 8291,
+          "sha512": "895e79a9a2747bc7b29f3a0e329e5b4218a9338c1fd730caf554dd2d4e888f5de6758151bc3cad957d8413db18fc163ba20671a951516573727540fc8601cd46",
+          "sha256": "8df4b79e5da0144a77fff80752bf0ce472e6ca1f0842402c3037fa71b5c05444",
+          "sha1": "997ceeeba81fd2797346c4acf1d25c6b821cfacf",
+          "md5": "5875904dfa7b29a80ffaa5a9c47b088c"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseSourcePublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "adswizz-interactive-ad-8.2.10-sources.jar",
+          "url": "adswizz-interactive-ad-8.2.10-sources.jar",
+          "size": 1649,
+          "sha512": "95855fc5dce1a399222e461a936917b1313bfdf9a034a66f4da94b33a009b4a8bf654ef40b4fe0e1b0e31e6a7643450aca52ba9d886b8c2ce06f49adcec04ecb",
+          "sha256": "78bd45121c117b412967a3f9343311df5ee05b987c1c16761751d6c71bce2f25",
+          "sha1": "a86989eee85b467d22bca9eedb680403822c4aab",
+          "md5": "a4ac36991a366622864edb5b5b3229db"
+        }
+      ]
+    }
+  ]
+}
