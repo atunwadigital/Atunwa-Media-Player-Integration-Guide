@@ -7,7 +7,7 @@
 | `Could not resolve com.atunwadigital:mediasdk:<version>` | The Atunwa Maven repository (`https://raw.githubusercontent.com/atunwadigital/Atunwa-Media-Player-Integration-Guide/maven`) isn't in `settings.gradle.kts`, or the version doesn't exist (check the `android-…` releases in [atunwadigital/Atunwa-Media-Player-Integration-Guide](https://github.com/atunwadigital/Atunwa-Media-Player-Integration-Guide/releases)). |
 | `Could not resolve com.adswizz:adswizz-sdk:8.2.10` | The Atunwa repository is missing from `settings.gradle.kts`, or its `content { }` filter doesn't include the `com.adswizz` group. |
 | `Serializer for class 'PlayerConfig' is not found` (release builds) | R8 removed the serializers. Add the [keep rules](getting-started.md#6-code-shrinking). |
-| Crash on start mentioning `MobileAdsInitProvider` / a missing app ID | Your manifest re-adds the provider, or an older SDK copy is in use. The SDK's manifest removes it on purpose. |
+| Crash on start mentioning `MobileAdsInitProvider` / a missing app ID | Your manifest re-adds the provider or removes the SDK's `AD_MANAGER_APP` meta-data, or an older SDK copy is in use. |
 
 ## Playback
 
@@ -26,8 +26,8 @@
 
 | Symptom | Cause / fix |
 |---|---|
-| `Google Mobile Ads App ID missing. Banners will be disabled.` | Add the `com.google.android.gms.ads.APPLICATION_ID` meta-data. |
-| `Ads are not enabled or SDK not initialized. Cannot load banner.` | `setup()` hasn't run, Mobile Ads is still initializing, or the app ID is missing. |
+| `Google Mobile Ads isn't configured (no AD_MANAGER_APP or APPLICATION_ID meta-data). Banners will be disabled.` | Your manifest removes the SDK's `com.google.android.gms.ads.AD_MANAGER_APP` meta-data (for example with `tools:node="remove"`). Drop that override. |
+| `Ads are not enabled or SDK not initialized. Cannot load banner.` | `setup()` hasn't run, or Mobile Ads is still initializing. |
 | Banner never appears on a video station | By design. The built-in views show banners only for audio stations. |
 | Banner appears a while after playback starts | By design. The banner waits for the preroll to resolve, for up to 12s. See [sequencing](ad-integration.md#4-how-ad-types-are-sequenced). |
 | Banner briefly disappears every 30–60s | That's the 10s no-ad gap between refreshes. |

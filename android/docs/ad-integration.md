@@ -28,7 +28,7 @@ shows no ads, and nothing changes in your code.
 | To enable | You do |
 |---|---|
 | IMA prerolls and companions | Nothing. Set the station's IMA tag in the dashboard. |
-| Ad Manager banners | Add `com.google.android.gms.ads.APPLICATION_ID` to your manifest ([Getting started §2](getting-started.md#required-only-for-ad-manager-banners)), and set the station's GPT ad unit in the dashboard. |
+| Ad Manager banners | Set the station's GPT ad unit in the dashboard. No app ID is needed. |
 | Amazon APS bidding | Nothing in your app. `AMAZON_APP_ID` is compiled into the SDK when it's published ([Configuration](configuration.md#sdk-keys-set-when-the-sdk-is-published)). |
 | AdsWizz SSI companions | Nothing. The AdsWizz SDK comes with the SDK, and the installation and zone IDs are already configured. |
 | Consent | Use an IAB TCF v2 CMP that writes `IABTCF_TCString` to the default SharedPreferences. |
@@ -121,14 +121,14 @@ MediaSDK.imaConfig.addFriendlyObstruction(
 
 ## 2. Display banners (Ad Manager + Amazon APS)
 
-`SDKGptManager` starts the Google Mobile Ads SDK during `MediaSDK.setup()`, and only if the app ID
-meta-data is present. It also starts Amazon APS when `AMAZON_APP_ID` is set. `SDKBannerAdView` does
+`SDKGptManager` starts the Google Mobile Ads SDK during `MediaSDK.setup()`. The SDK's manifest
+declares `com.google.android.gms.ads.AD_MANAGER_APP`, so no app ID is needed. It also starts Amazon APS when `AMAZON_APP_ID` is set. `SDKBannerAdView` does
 the rest.
 
 ### Request flow
 
-0. **Gate.** If the Mobile Ads SDK isn't enabled because the app ID is missing or `setup()`
-   hasn't run, the view hides itself and reports no content.
+0. **Gate.** If the Mobile Ads SDK isn't enabled yet (`setup()` hasn't run or initialization
+   hasn't finished), the view hides itself and reports no content.
 1. **Size fitting.** The view measures its parent and requests only the supported sizes that fit.
    The defaults are `MEDIUM_RECTANGLE` (300×250) and `BANNER` (320×50). If none fit, it requests
    all of them.

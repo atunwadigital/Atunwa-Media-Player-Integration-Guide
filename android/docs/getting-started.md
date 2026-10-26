@@ -99,33 +99,13 @@ into your app:
 - **`SDKPlayerActivity`:** the built-in full-screen player, with PiP support.
 - **Cast options provider** (`androidx.media3.cast.DefaultCastOptionsProvider`) and
   `MediaTransferReceiver` for output switching.
-- **Removal of `MobileAdsInitProvider`**, so the Google Mobile Ads SDK doesn't crash on startup
-  when no app ID is set. `SDKGptManager` initializes it manually instead.
+- **`com.google.android.gms.ads.AD_MANAGER_APP = true`**, which marks your app as an Ad Manager
+  app so Google Mobile Ads starts without an AdMob or Ad Manager app ID. Banners need no app ID.
+- **Removal of `MobileAdsInitProvider`**, so Google Mobile Ads doesn't start at process launch.
+  `SDKGptManager` initializes it during `setup()` instead.
 
-### Required only for Ad Manager banners
-
-If you want GPT/Ad Manager banners, declare your Google Mobile Ads app ID:
-
-```xml
-<application>
-    <meta-data
-        android:name="com.google.android.gms.ads.APPLICATION_ID"
-        android:value="${ADMOB_APP_ID}" />
-</application>
-```
-
-```kotlin
-// app/build.gradle.kts
-android {
-    defaultConfig {
-        manifestPlaceholders["ADMOB_APP_ID"] =
-            localProperties.getProperty("ADMOB_APP_ID") ?: "ca-app-pub-3940256099942544~3347511713" // Google's test ID
-    }
-}
-```
-
-Leaving it out is safe. The SDK logs `Google Mobile Ads App ID missing. Banners will be disabled.`
-and keeps everything else working, including IMA prerolls, companions and AdsWizz.
+If your app already declares `com.google.android.gms.ads.APPLICATION_ID` (because it also shows its
+own AdMob ads, for example), keep it. It works alongside the SDK's meta-data.
 
 ### About `RECORD_AUDIO`
 

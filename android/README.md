@@ -55,25 +55,12 @@ anything for it.
 
 ### 2. Configure keys
 
-The SDK needs no keys of its own. For Google Ad Manager banners, add your Ad Manager app ID to
-`local.properties` (which stays out of version control):
+The SDK needs no keys of its own, and Google Ad Manager banners don't need an AdMob or Ad Manager
+app ID. The SDK's manifest marks your app as an Ad Manager app (`com.google.android.gms.ads.AD_MANAGER_APP`),
+and banners are served by the ad unit set for each station in the dashboard.
 
-```properties
-ADMOB_APP_ID=ca-app-pub-...~...    # optional: enables Google Ad Manager banners
-```
-
-If you want banners, declare the Ad Manager app ID in your app's manifest:
-
-```xml
-<application>
-    <meta-data
-        android:name="com.google.android.gms.ads.APPLICATION_ID"
-        android:value="${ADMOB_APP_ID}" />
-</application>
-```
-
-You don't need to declare anything else in the manifest. The SDK's own manifest already declares
-the playback service, the player activity and the permissions, and they merge into your app. See
+You don't need to declare anything in the manifest. The SDK's own manifest already declares the
+playback service, the player activity and the permissions, and they merge into your app. See
 [Configuration](docs/configuration.md) for every key.
 
 ### 3. Set up the SDK at launch

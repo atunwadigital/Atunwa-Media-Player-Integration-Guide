@@ -35,7 +35,6 @@ or wire your own equivalents:
 
 | Key | Purpose |
 |---|---|
-| `ADMOB_APP_ID` | Google Mobile Ads app ID, passed into the manifest's `com.google.android.gms.ads.APPLICATION_ID` meta-data through `manifestPlaceholders`. Required for Ad Manager banners. |
 | `ATUNWA_APP_MODE` | `single` or `publisher`, which picks the [integration mode](integration-modes.md). |
 | `ATUNWA_PLAYER_KEY` | Player API key for single-player mode. |
 | `ATUNWA_PUBLISHER_SDK_KEY` | Publisher SDK key for publisher mode. |
@@ -48,9 +47,6 @@ val localProperties = Properties().apply {
 
 android {
     defaultConfig {
-        manifestPlaceholders["ADMOB_APP_ID"] =
-            localProperties.getProperty("ADMOB_APP_ID") ?: "ca-app-pub-3940256099942544~3347511713"
-
         buildConfigField("String", "APP_MODE", "\"${localProperties.getProperty("ATUNWA_APP_MODE") ?: "single"}\"")
         buildConfigField("String", "PLAYER_KEY", "\"${localProperties.getProperty("ATUNWA_PLAYER_KEY") ?: ""}\"")
         buildConfigField("String", "PUBLISHER_SDK_KEY", "\"${localProperties.getProperty("ATUNWA_PUBLISHER_SDK_KEY") ?: ""}\"")
@@ -68,9 +64,6 @@ For an app that uses the SDK:
 ATUNWA_APP_MODE=single                 # or "publisher"
 ATUNWA_PLAYER_KEY=                     # single-player mode
 ATUNWA_PUBLISHER_SDK_KEY=              # publisher mode
-
-# ── Google Ad Manager (banners) ───────────────────────────────────────
-ADMOB_APP_ID=ca-app-pub-3940256099942544~3347511713   # Google's test ID; replace for production
 ```
 
 ## A note on secrecy
@@ -89,7 +82,6 @@ pipeline secrets before building:
 # Example CI step (GitHub Actions, Bitrise, etc.)
 cat > local.properties <<EOF
 sdk.dir=$ANDROID_HOME
-ADMOB_APP_ID=$ADMOB_APP_ID
 ATUNWA_APP_MODE=publisher
 ATUNWA_PUBLISHER_SDK_KEY=$ATUNWA_PUBLISHER_SDK_KEY
 EOF
