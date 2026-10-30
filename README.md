@@ -12,6 +12,8 @@ other.
 |---|---|---|
 | **iOS** 15+ | Swift Package Manager | [iOS SDK →](ios/README.md) |
 | **Android** 7.0+ (API 24) | Gradle (Maven) | [Android SDK →](android/README.md) |
+| **Flutter** | The iOS and Android SDKs, plus a bridge you copy into your app | [Flutter guide →](flutter/README.md) |
+| **React Native** | The iOS and Android SDKs, plus a native module you copy into your app | [React Native guide →](react-native/README.md) |
 
 ## What you get
 
@@ -97,6 +99,21 @@ The SDK's own manifest already declares its service, player screen and permissio
 | Keys and settings | [Configuration](ios/docs/configuration.md) | [Configuration](android/docs/configuration.md) |
 | Every public type and method | [API reference](ios/docs/api-reference.md) | [API reference](android/docs/api-reference.md) |
 | Common problems | [Troubleshooting](ios/docs/troubleshooting.md) | [Troubleshooting](android/docs/troubleshooting.md) |
+
+## Flutter and React Native
+
+There are no Flutter or React Native packages yet. You can still use the SDKs from either
+framework: add the native iOS and Android SDKs to your app's `ios/` and `android/` projects, then
+copy in a small bridge so Dart or JavaScript can launch the player, control playback and observe
+state. Playback, the player screens and ads all stay native.
+
+| | Flutter | React Native |
+|---|---|---|
+| Overview and the bridge's API | [Flutter](flutter/README.md) | [React Native](react-native/README.md) |
+| Native setup and the bridge code | [Getting started](flutter/docs/getting-started.md) | [Getting started](react-native/docs/getting-started.md) |
+| Live card and mini player in your screens | [Native views](flutter/docs/native-views.md) | [Native views](react-native/docs/native-views.md) |
+| Expo apps | | [Expo](react-native/docs/expo.md) |
+| Common problems | [Troubleshooting](flutter/docs/troubleshooting.md) | [Troubleshooting](react-native/docs/troubleshooting.md) |
 
 ## Versions
 
