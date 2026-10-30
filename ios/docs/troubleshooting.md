@@ -28,7 +28,7 @@
 
 | Symptom | Cause and fix |
 |---|---|
-| No banners at all | `GADApplicationIdentifier` is missing. Log line: `MediaSDK: SDKGptManager — no GADApplicationIdentifier in Info.plist, GPT banners disabled` |
+| No banners at all | `GADApplicationIdentifier` is missing, empty or not in `ca-app-pub-<digits>~<digits>` form (an unresolved `$(VAR)` counts). Log line: `MediaSDK: SDKGptManager — no valid Ad Manager app ID (GADApplicationIdentifier) in Info.plist, GPT banners disabled` |
 | Banner never shows on a station with a preroll | The banner waits for the preroll to resolve, up to 12 s. Also check `onContentStateChanged`: a load can fail or not fill |
 | Banner missing while video is full screen | Deliberate: nothing is requested into a hidden spot. It loads when the viewer leaves full screen |
 | No preroll | The station has no `imaUrl` (`PlayerConfig.adUrl`), or no real screen has attached the ad surface yet. A host-built player must call `SDKAdDisplayContainer.shared.attachAdSurface(to:viewController:)`. Log lines start with `MediaSDK: IMAAdProvider` |

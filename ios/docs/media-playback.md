@@ -176,15 +176,21 @@ PiP needs the `audio` background mode, and doesn't work in the iOS Simulator.
 
 ## Quality and seeking
 
-AVFoundation doesn't let an app pick a specific HLS variant (Android's track selector). The SDK caps
-the peak bitrate instead:
+The quality options come from the stream itself: the SDK reads the loaded HLS stream's variants
+(`#EXT-X-STREAM-INF`) and offers one option per distinct quality, labelled by resolution for video
+("1080p", "720p60") or by bitrate for audio ("128 kbps"):
 
 ```swift
-MediaSDK.shared.selectQuality(.medium)   // .auto, .high (3 Mbps), .medium (1.2 Mbps), .low (600 kbps)
-MediaSDK.shared.selectedQuality          // the current choice; kept across stations
+MediaSDK.shared.availableQualities           // [.auto, 1080p, 720p, ...] for the current stream
+MediaSDK.shared.availableQualitiesPublisher  // emits when a new stream's variants are read
+MediaSDK.shared.selectQuality(option)        // one of availableQualities
+MediaSDK.shared.selectedQuality              // resets to .auto for each station
 ```
 
-The built-in player's quality button uses the same tiers.
+A stream with only one variant offers just `.auto`, and the built-in player hides its quality
+button. AVFoundation can't pin a variant the way Android's track selector does, so a choice caps
+the peak bitrate and resolution at that variant's values: the player plays it, or a lower one if the
+network can't keep up.
 
 Live streams that expose a DVR window can be scrubbed:
 

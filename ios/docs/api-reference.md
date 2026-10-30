@@ -43,7 +43,7 @@ Everything public in `import MediaSDK`. `MediaSDK` and every view are `@MainActo
 | `func play()` | Starts or resumes playback |
 | `func pause()` | Pauses playback |
 | `func reset()` | Stops playback, clears the item, both configs and ad state, forces `.idle`, closes the player and PiP, sends `dismissPlayerSignal` |
-| `func selectQuality(_ quality: StreamQuality)` | Caps the peak bitrate (`.auto`, `.high`, `.medium`, `.low`). Kept across stations |
+| `func selectQuality(_ option: StreamQualityOption)` | Plays the current stream at one of `availableQualities` (`.auto` lets ABR choose). Resets to `.auto` for each station |
 | `func canSeek() -> Bool` | `true` when the live stream has a DVR window wider than 5 s |
 | `func seek(by seconds: Double)` | Seeks within the DVR window, clamped |
 
@@ -92,7 +92,8 @@ Everything public in `import MediaSDK`. `MediaSDK` and every view are `@MainActo
 | `isInitialized` | `Bool` (read-only) | Set by `initialize`/`initializePublisher`/station switches, cleared by `reset()` |
 | `playerConfig` | `PlayerConfig?` (read-only) | Active station |
 | `publisherConfig` | `PublisherConfig?` (read-only) | Loaded publisher |
-| `selectedQuality` | `StreamQuality` (read-only) | |
+| `availableQualities` | `[StreamQualityOption]` (read-only) | `.auto`, then the current stream's own variants, highest first. Just `[.auto]` until they're read, and for single-variant streams. Also `availableQualitiesPublisher` |
+| `selectedQuality` | `StreamQualityOption` (read-only) | Also `selectedQualityPublisher` |
 | `videoFullscreenByDefault` | `Bool` (`var`, default `true`) | `SDKPlayerViewController` opens video full screen in landscape |
 | `videoPipOnBack` | `Bool` (`var`, default `true`) | Closing the player during a playing video minimizes it into PiP |
 | `imaConfig` | `IMAConfig` (`var`) | Set before the first ad-enabled load |
@@ -111,7 +112,7 @@ Everything public in `import MediaSDK`. `MediaSDK` and every view are `@MainActo
 | `MediaMetadata` (struct) | `title`, `artistOrShow`, `artworkUrl: URL?` |
 | `StreamType` (enum) | `vod`, `live` |
 | `MediaType` (enum) | `audio`, `video` |
-| `MediaSDK.StreamQuality` (enum) | `auto`, `high`, `medium`, `low`; `label` |
+| `StreamQualityOption` (struct) | `label` ("Auto", "1080p", "720p60", "128 kbps"), `detail: String?` (bitrate, for video), `peakBitRate`, `width: Int?`, `height: Int?`, `isAuto`; `static let auto` |
 
 ### Configuration (from the backend; `Codable`)
 
@@ -179,7 +180,7 @@ directory API) and pass it to `loadPlayer`/`activatePlayer`.
 | Type | API |
 |---|---|
 | `SDKAdDisplayContainer` (`shared`) | `adContainerView`, `companionContainerView`, `attachAdSurface(to:viewController:)`, `registerCompanionSlots(ownerId:slots:)`, `unregisterCompanionSlots(ownerId:)`, `hasRealPresenter` |
-| `SDKGptManager` | `isAdsEnabled` (`true` once Google Mobile Ads has started; needs `GADApplicationIdentifier`) |
+| `SDKGptManager` | `isAdsEnabled` (`true` once Google Mobile Ads has started; needs a valid Ad Manager app ID in `GADApplicationIdentifier`) |
 
 ## Utilities
 

@@ -94,14 +94,14 @@ indicator and orientation decisions to the player.
 
 | Feature | Detail |
 |---|---|
-| **Adaptive layout** | Picked from `streamChannels.isVideo`. **Radio**: a 200 pt artwork circle (swapped for a GPT banner while one is showing), live badge, title, waveform, play/pause, status, companion slot. **Video**: a 16:9 video surface with on-video controls |
+| **Adaptive layout** | Picked from `streamChannels.isVideo`. **Radio**: a 200 pt circle with the station logo (swapped for a companion ad or GPT banner while one is showing), live badge, title, waveform, play/pause, status. **Video**: a 16:9 video surface with on-video controls |
 | **Full-screen video** | Video opens full screen in landscape (`videoFullscreenByDefault`). Tap the video for play/pause, a full-screen toggle and (in full screen) a minimize button. Turning the device also switches modes. See [Full-screen video](media-playback.md#full-screen-video) |
 | **Picture-in-Picture** | Closing a playing video minimizes it into PiP (`videoPipOnBack`); so does leaving the app. Restoring brings this same screen back; closing the window pauses. See [Picture-in-Picture](media-playback.md#picture-in-picture) |
 | **AirPlay** | An AirPlay route button in the navigation bar (Android's Cast button) |
-| **Quality** | A picker for `StreamQuality` (Auto / High / Medium / Data Saver) |
+| **Quality** | A picker over the stream's own variants (`availableQualities`), shown only when the stream offers more than one |
 | **Share** | Shares the station title, show name and stream URL through the system share sheet |
 | **Related channels** | In publisher mode, a video station's portrait layout shows a rail of the publisher's other video stations. Tapping one switches station in place |
-| **Ads** | IMA prerolls render over the video (or the artwork for radio). GPT banners: in place of the artwork for radio, below the video for TV. IMA VAST companions and AdsWizz SSI companions (300×250) render below the controls. Nothing is requested into a spot that's hidden by full screen. See [Advertising](ad-integration.md) |
+| **Ads** | IMA prerolls render over the video (or the artwork for radio). For radio, IMA VAST and AdsWizz SSI companions (300×250) take the station logo's place while they show, ahead of the GPT banner, which takes it otherwise and pauses during a companion. For TV, the GPT banner and IMA companions render below the video. Nothing is requested into a spot that's hidden by full screen. See [Advertising](ad-integration.md) |
 | **Station switches** | A station switch from anywhere (related channels, your own list) keeps the screen open and re-renders it. `reset()` closes it |
 
 There's only ever one instance. `launchPlayer` while it's on screen does nothing; while it's in PiP,

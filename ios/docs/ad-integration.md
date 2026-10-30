@@ -6,13 +6,13 @@ best-effort: if an ad fails or times out, the stream still plays.
 
 | Integration | Configured by | Renders in |
 |---|---|---|
-| IMA prerolls + VAST companions | the station's `imaUrl` (decoded as `PlayerConfig.adUrl`) | Over the video (or the radio artwork); companions in the companion slot |
+| IMA prerolls + VAST companions | the station's `imaUrl` (decoded as `PlayerConfig.adUrl`) | Over the video (or the radio station logo); companions in the station logo's place for radio, below the video for TV |
 | Google Ad Manager banners | the station's `gptUrl` | `SDKBannerAdView` (player screen, live card) |
 | AdsWizz SSI companions | live audio streams (compiled-in zone 2459) | `SDKCompanionBannerView` |
 
 ## Setup checklist
 
-- [ ] `GADApplicationIdentifier` in Info.plist, for Ad Manager banners (optional).
+- [ ] Your Ad Manager app ID as `GADApplicationIdentifier` in Info.plist, for Ad Manager banners (optional).
 - [ ] Optionally tune IMA (`MediaSDK.shared.imaConfig`) before the first ad-enabled load.
 - [ ] Optionally plug in header bidding (`MediaSDK.shared.apsBidProvider`).
 - [ ] If you build your own player screen, attach the IMA ad surface (see below).
@@ -108,7 +108,7 @@ The default `NoOpAPSBidProvider` returns no bids, so requests go out GPT-only.
 - `isSuppressed = true` stops all requests and hides the banner, for when its spot is hidden.
   Setting it back to `false` loads straight away if an ad is due. The built-in player suppresses its
   below-video banner while the video is full screen.
-- Without `GADApplicationIdentifier`, banners stay off and the view stays hidden.
+- Without a valid Ad Manager app ID in `GADApplicationIdentifier`, banners stay off and the view stays hidden.
 
 ### Using it in your own layouts
 

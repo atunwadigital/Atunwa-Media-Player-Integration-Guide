@@ -82,7 +82,7 @@ MediaPlayer, MediaToolbox (for the waveform's audio tap), Network and Combine.
 |---|---|---|
 | `UIBackgroundModes` → `audio` | **Yes** | Keeps playback going in the background and on the lock screen, and is what Picture-in-Picture needs. In Xcode: **Signing & Capabilities → Background Modes → Audio, AirPlay, and Picture in Picture** |
 | Landscape orientations in `UISupportedInterfaceOrientations` | For full-screen video | The built-in player turns video full screen in landscape. If the app only allows portrait, the rotation request is refused and the video stays portrait. See [Full-screen video](media-playback.md#full-screen-video) |
-| `GADApplicationIdentifier` | For Ad Manager banners | Without it the SDK logs `SDKGptManager — no GADApplicationIdentifier in Info.plist, GPT banners disabled` and keeps everything else working, including IMA prerolls, companions and AdsWizz |
+| `GADApplicationIdentifier` | For Ad Manager banners | Your **Ad Manager** app ID, from **Inventory › Apps** in Ad Manager. No AdMob account is needed. Google Mobile Ads on iOS has no way to run without one, unlike Android. If it's missing or malformed, the SDK logs `SDKGptManager — no valid Ad Manager app ID (GADApplicationIdentifier) in Info.plist, GPT banners disabled` and keeps everything else working, including IMA prerolls, companions and AdsWizz |
 | `SKAdNetworkItems` | Recommended with banners | Google's recommended list for Ad Manager attribution. See Google's Mobile Ads documentation |
 
 ```xml
@@ -91,9 +91,14 @@ MediaPlayer, MediaToolbox (for the waveform's audio tap), Network and Combine.
     <string>audio</string>
 </array>
 
+<!-- Ad Manager app ID -->
 <key>GADApplicationIdentifier</key>
 <string>ca-app-pub-xxxxxxxxxxxxxxxx~xxxxxxxxxx</string>
 ```
+
+The SDK only starts Google Mobile Ads when the value has the issued `ca-app-pub-<digits>~<digits>`
+form. Google Mobile Ads throws at launch on a missing or malformed ID, so an empty value or an
+unresolved `$(VAR)` from an `.xcconfig` turns banners off instead of crashing the app.
 
 The SDK doesn't need microphone, camera or tracking permissions. Its waveform reads the player's own
 decoded audio, not the microphone.
