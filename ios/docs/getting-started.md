@@ -82,7 +82,7 @@ MediaPlayer, MediaToolbox (for the waveform's audio tap), Network and Combine.
 |---|---|---|
 | `UIBackgroundModes` → `audio` | **Yes** | Keeps playback going in the background and on the lock screen, and is what Picture-in-Picture needs. In Xcode: **Signing & Capabilities → Background Modes → Audio, AirPlay, and Picture in Picture** |
 | Landscape orientations in `UISupportedInterfaceOrientations` | For full-screen video | The built-in player turns video full screen in landscape. If the app only allows portrait, the rotation request is refused and the video stays portrait. See [Full-screen video](media-playback.md#full-screen-video) |
-| `GADApplicationIdentifier` | For Ad Manager banners | Your **Ad Manager** app ID, from **Inventory › Apps** in Ad Manager. No AdMob account is needed. Google Mobile Ads on iOS has no way to run without one, unlike Android. If it's missing or malformed, the SDK logs `SDKGptManager — no valid Ad Manager app ID (GADApplicationIdentifier) in Info.plist, GPT banners disabled` and keeps everything else working, including IMA prerolls, companions and AdsWizz |
+| `GADApplicationIdentifier` | **Before you ship** | Your **Ad Manager** app ID, from **Inventory › Apps** in Ad Manager. No AdMob account is needed. Google Mobile Ads on iOS has no way to run without one, unlike Android. If it's missing or malformed, the SDK uses Google's sample app ID instead, so the app still runs and shows banners, and logs a warning. See below |
 | `SKAdNetworkItems` | Recommended with banners | Google's recommended list for Ad Manager attribution. See Google's Mobile Ads documentation |
 
 ```xml
@@ -96,9 +96,19 @@ MediaPlayer, MediaToolbox (for the waveform's audio tap), Network and Combine.
 <string>ca-app-pub-xxxxxxxxxxxxxxxx~xxxxxxxxxx</string>
 ```
 
-The SDK only starts Google Mobile Ads when the value has the issued `ca-app-pub-<digits>~<digits>`
-form. Google Mobile Ads throws at launch on a missing or malformed ID, so an empty value or an
-unresolved `$(VAR)` from an `.xcconfig` turns banners off instead of crashing the app.
+Google Mobile Ads stops the app at launch (`GADInvalidInitializationException`) when
+`GADApplicationIdentifier` is missing or isn't in the issued `ca-app-pub-<digits>~<digits>` form,
+just by being linked. To keep that from happening while you set up, the SDK checks the value as the
+app launches. If it's missing, empty, malformed or an unresolved `$(VAR)` from an `.xcconfig`, the
+SDK uses Google's sample app ID, `ca-app-pub-3940256099942544~1458002511`, logs
+
+```
+MediaSDK: no valid Ad Manager app ID (GADApplicationIdentifier) in Info.plist. Using Google's sample app ID ca-app-pub-3940256099942544~1458002511 so the app can run. Set your own Ad Manager app ID in Info.plist before you ship.
+```
+
+and sets `MediaSDK.shared.gptManager.isUsingTestAppId` to `true`. Playback, IMA prerolls,
+companions, AdsWizz and banners all keep working. Add your own Ad Manager app ID before you
+release, so banner impressions are attributed to your app.
 
 The SDK doesn't need microphone, camera or tracking permissions. Its waveform reads the player's own
 decoded audio, not the microphone.

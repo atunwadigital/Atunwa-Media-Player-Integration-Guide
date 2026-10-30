@@ -31,7 +31,7 @@ means a new SDK version.
 |---|---|---|
 | `UIBackgroundModes` = `audio` | Info.plist / **Background Modes** capability | Yes. Background playback, lock screen and PiP |
 | Landscape orientations | Info.plist `UISupportedInterfaceOrientations` / **Device Orientation** | For full-screen landscape video |
-| `GADApplicationIdentifier` | Info.plist | For Ad Manager banners: your Ad Manager app ID (**Inventory › Apps**), no AdMob account needed. Use Google's test ID `ca-app-pub-3940256099942544~1458002511` during development, never in a release |
+| `GADApplicationIdentifier` | Info.plist | Your Ad Manager app ID (**Inventory › Apps**), no AdMob account needed. Without a valid one, the SDK uses Google's sample app ID `ca-app-pub-3940256099942544~1458002511` so the app runs, and logs a warning. Set your own before you ship |
 | `SKAdNetworkItems` | Info.plist | Recommended by Google when serving banners |
 | Player API key / publisher SDK key | Your own code or config | Yes, one of the two |
 

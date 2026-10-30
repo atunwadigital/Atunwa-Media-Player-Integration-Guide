@@ -19,20 +19,20 @@ let package = Package(
         // The prebuilt SDK (a static XCFramework).
         .binaryTarget(
             name: "MediaSDK",
-            url: "https://github.com/atunwadigital/Atunwa-Media-Player-Integration-Guide/releases/download/1.0.5/MediaSDK.xcframework.zip",
-            checksum: "9edbd31e9b5d3f14b9536848674d4f74d1ed1013c59851ae49b47b85c64ace6b"
+            url: "https://github.com/atunwadigital/Atunwa-Media-Player-Integration-Guide/releases/download/1.0.6/MediaSDK.xcframework.zip",
+            checksum: "f331070097b6f4bcf54b95cb13efda180a902a84359dcf10bf6f35f684dabaac"
         ),
         // The AdsWizz SDK 8.0.1, unmodified. Proprietary software of AdsWizz Inc.,
         // redistributed by Atunwa Digital for use with this SDK; see ios/third-party/ADSWIZZ-NOTICE.md.
         .binaryTarget(
             name: "AdswizzSDK",
-            url: "https://github.com/atunwadigital/Atunwa-Media-Player-Integration-Guide/releases/download/1.0.5/AdswizzSDK.xcframework.zip",
-            checksum: "938795a4bd36d93793e299534d0f124fba5a0fb2b83f9773a846963110b7b6a7"
+            url: "https://github.com/atunwadigital/Atunwa-Media-Player-Integration-Guide/releases/download/1.0.6/AdswizzSDK.xcframework.zip",
+            checksum: "4d111407ade7cd65c6790d19cabaaa42434ca9219a18451a9ffc4066c7b1b0ea"
         ),
         .binaryTarget(
             name: "AdswizzSDKCore",
-            url: "https://github.com/atunwadigital/Atunwa-Media-Player-Integration-Guide/releases/download/1.0.5/AdswizzSDKCore.xcframework.zip",
-            checksum: "5f2ed9e933aa3d3beb701193f76e989f3e7f14ad9bfa713a16e64533b4c26eae"
+            url: "https://github.com/atunwadigital/Atunwa-Media-Player-Integration-Guide/releases/download/1.0.6/AdswizzSDKCore.xcframework.zip",
+            checksum: "3deed1d0ad07ba9565d194ee769fac3927d78f501c04c8774fafdab371af55c9"
         ),
         // A binary target can't declare dependencies of its own, so this empty target brings in
         // the frameworks the SDK links against.

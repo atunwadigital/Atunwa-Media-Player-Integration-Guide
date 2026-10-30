@@ -28,7 +28,8 @@
 
 | Symptom | Cause and fix |
 |---|---|
-| No banners at all | `GADApplicationIdentifier` is missing, empty or not in `ca-app-pub-<digits>~<digits>` form (an unresolved `$(VAR)` counts). Log line: `MediaSDK: SDKGptManager — no valid Ad Manager app ID (GADApplicationIdentifier) in Info.plist, GPT banners disabled` |
+| Log says the SDK is using Google's sample app ID | `GADApplicationIdentifier` is missing, empty or not in `ca-app-pub-<digits>~<digits>` form (an unresolved `$(VAR)` counts), so the SDK fell back to `ca-app-pub-3940256099942544~1458002511` to keep the app running. Banners work, but set your own Ad Manager app ID before you ship. `gptManager.isUsingTestAppId` is `true` while the fallback is in use |
+| No banners at all | Google Mobile Ads hasn't started: `gptManager.isAdsEnabled` is `false`. In an app extension the SDK doesn't apply the sample app ID, so set `GADApplicationIdentifier` there yourself. Log line: `MediaSDK: SDKGptManager — no valid Ad Manager app ID (GADApplicationIdentifier) in Info.plist, GPT banners disabled` |
 | Banner never shows on a station with a preroll | The banner waits for the preroll to resolve, up to 12 s. Also check `onContentStateChanged`: a load can fail or not fill |
 | Banner missing while video is full screen | Deliberate: nothing is requested into a hidden spot. It loads when the viewer leaves full screen |
 | No preroll | The station has no `imaUrl` (`PlayerConfig.adUrl`), or no real screen has attached the ad surface yet. A host-built player must call `SDKAdDisplayContainer.shared.attachAdSurface(to:viewController:)`. Log lines start with `MediaSDK: IMAAdProvider` |

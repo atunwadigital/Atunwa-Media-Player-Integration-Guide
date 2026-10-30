@@ -63,8 +63,8 @@ the AdsWizz SDK it uses (see [Getting started → About the AdsWizz SDK](docs/ge
     <string>audio</string>
 </array>
 
-<!-- Optional: your Ad Manager app ID (Ad Manager › Inventory › Apps), enables banners.
-     No AdMob account is needed. -->
+<!-- Your Ad Manager app ID (Ad Manager › Inventory › Apps). No AdMob account is needed.
+     Without one, the SDK uses Google's sample app ID and logs a warning; set yours before you ship. -->
 <key>GADApplicationIdentifier</key>
 <string>ca-app-pub-xxxxxxxxxxxxxxxx~xxxxxxxxxx</string>
 ```

@@ -12,7 +12,7 @@ best-effort: if an ad fails or times out, the stream still plays.
 
 ## Setup checklist
 
-- [ ] Your Ad Manager app ID as `GADApplicationIdentifier` in Info.plist, for Ad Manager banners (optional).
+- [ ] Your Ad Manager app ID as `GADApplicationIdentifier` in Info.plist. Without one, banners use Google's sample app ID (`gptManager.isUsingTestAppId` is `true`); set yours before you ship.
 - [ ] Optionally tune IMA (`MediaSDK.shared.imaConfig`) before the first ad-enabled load.
 - [ ] Optionally plug in header bidding (`MediaSDK.shared.apsBidProvider`).
 - [ ] If you build your own player screen, attach the IMA ad surface (see below).
@@ -108,7 +108,7 @@ The default `NoOpAPSBidProvider` returns no bids, so requests go out GPT-only.
 - `isSuppressed = true` stops all requests and hides the banner, for when its spot is hidden.
   Setting it back to `false` loads straight away if an ad is due. The built-in player suppresses its
   below-video banner while the video is full screen.
-- Without a valid Ad Manager app ID in `GADApplicationIdentifier`, banners stay off and the view stays hidden.
+- Without a valid Ad Manager app ID in `GADApplicationIdentifier`, banners use Google's sample app ID. Set yours before you ship.
 
 ### Using it in your own layouts
 

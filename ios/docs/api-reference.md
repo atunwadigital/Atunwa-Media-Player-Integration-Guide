@@ -98,7 +98,7 @@ Everything public in `import MediaSDK`. `MediaSDK` and every view are `@MainActo
 | `videoPipOnBack` | `Bool` (`var`, default `true`) | Closing the player during a playing video minimizes it into PiP |
 | `imaConfig` | `IMAConfig` (`var`) | Set before the first ad-enabled load |
 | `apsBidProvider` | `APSBidProvider` (`var`) | Header-bidding seam for banners. Default `NoOpAPSBidProvider()` |
-| `gptManager` | `SDKGptManager` | `isAdsEnabled` |
+| `gptManager` | `SDKGptManager` | `isAdsEnabled`, `isUsingTestAppId` |
 
 ## Models
 
@@ -180,7 +180,7 @@ directory API) and pass it to `loadPlayer`/`activatePlayer`.
 | Type | API |
 |---|---|
 | `SDKAdDisplayContainer` (`shared`) | `adContainerView`, `companionContainerView`, `attachAdSurface(to:viewController:)`, `registerCompanionSlots(ownerId:slots:)`, `unregisterCompanionSlots(ownerId:)`, `hasRealPresenter` |
-| `SDKGptManager` | `isAdsEnabled` (`true` once Google Mobile Ads has started; needs a valid Ad Manager app ID in `GADApplicationIdentifier`) |
+| `SDKGptManager` | `isAdsEnabled` (`true` once Google Mobile Ads has started), `isUsingTestAppId` (`true` when the app has no valid `GADApplicationIdentifier`, so Google's sample app ID is in use), `static let testAppId` (that sample ID) |
 
 ## Utilities
 
