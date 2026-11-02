@@ -115,6 +115,13 @@ state. Playback, the player screens and ads all stay native.
 | Expo apps | | [Expo](react-native/docs/expo.md) |
 | Common problems | [Troubleshooting](flutter/docs/troubleshooting.md) | [Troubleshooting](react-native/docs/troubleshooting.md) |
 
+## Example apps
+
+[`examples/`](examples/README.md) has a small app for each platform: [Android](examples/android),
+[iOS](examples/ios), [Flutter](examples/flutter) and [React Native](examples/react-native). Each one
+shows both ways of integrating: one station with a player API key, or all of a publisher's stations
+with a publisher SDK key.
+
 ## Versions
 
 Every release is listed under

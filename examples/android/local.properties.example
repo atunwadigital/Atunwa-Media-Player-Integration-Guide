@@ -1,0 +1,9 @@
+# Copy this file to local.properties (git-ignored) and fill in the key Atunwa gave you.
+# Android Studio also writes sdk.dir here; keep that line.
+
+# "single"    : play one station, with a player API key
+# "publisher" : offer all of a publisher's stations, with a publisher SDK key
+ATUNWA_APP_MODE=single
+
+ATUNWA_PLAYER_KEY=
+ATUNWA_PUBLISHER_SDK_KEY=
