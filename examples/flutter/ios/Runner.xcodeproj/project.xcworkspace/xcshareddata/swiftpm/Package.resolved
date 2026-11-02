@@ -1,0 +1,41 @@
+{
+  "pins" : [
+    {
+      "identity" : "atunwa-media-player-integration-guide",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/atunwadigital/Atunwa-Media-Player-Integration-Guide.git",
+      "state" : {
+        "revision" : "514ae06934bee312596d889298ca6d083d4d2c98",
+        "version" : "1.0.6"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-interactive-media-ads-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-ios.git",
+      "state" : {
+        "revision" : "b9518343f5aed48ed0751680ce04910afdcf5c8f",
+        "version" : "3.34.1"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-mobile-ads",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
+      "state" : {
+        "revision" : "1239c23464503053c17d37ee5daa70de3455e9c8",
+        "version" : "12.14.0"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-user-messaging-platform",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git",
+      "state" : {
+        "revision" : "13b248eaa73b7826f0efb1bcf455e251d65ecb1b",
+        "version" : "3.1.0"
+      }
+    }
+  ],
+  "version" : 2
+}
