@@ -1,0 +1,5 @@
+// The publisher SDK key Atunwa gave you.
+ATUNWA_PUBLISHER_SDK_KEY =
+
+// Your Ad Manager app ID (ca-app-pub-…~…). Without one, the SDK uses Google's sample app ID.
+// GAD_APPLICATION_IDENTIFIER = ca-app-pub-xxxxxxxxxxxxxxxx~xxxxxxxxxx

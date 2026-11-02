@@ -1,0 +1,3 @@
+# Copy this file to local.properties (git-ignored) and set the publisher SDK key Atunwa gave
+# you. Android Studio also writes sdk.dir here; keep that line.
+ATUNWA_PUBLISHER_SDK_KEY=

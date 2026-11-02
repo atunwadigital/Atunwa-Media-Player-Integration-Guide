@@ -1,0 +1,8 @@
+// Media House settings. Don't put keys here: copy MediaHouse.local.xcconfig.example to
+// MediaHouse.local.xcconfig (git-ignored) and set them there.
+ATUNWA_PUBLISHER_SDK_KEY =
+// Your Ad Manager app ID, from Inventory › Apps in Ad Manager. Left empty, the SDK uses Google's
+// sample app ID and logs a warning. Set yours (in MediaHouse.local.xcconfig) before you ship.
+GAD_APPLICATION_IDENTIFIER =
+
+#include? "MediaHouse.local.xcconfig"

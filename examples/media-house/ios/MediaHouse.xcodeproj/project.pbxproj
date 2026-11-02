@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03558E4A2C176D1966B4635A /* Tiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27CEBA289FE39FF5395107 /* Tiles.swift */; };
+		40A353A5566BCD74C4AE588F /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21EC5566E7F714A57E8A45D /* Components.swift */; };
+		7B26B2A63D19E29982B7573B /* catalogue.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AEC9770C98C9AB24B4AF15C /* catalogue.json */; };
+		A36B042C0A40A5D307A50DF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24974E5D6DFF9B2144B44352 /* Assets.xcassets */; };
+		A66EDA64DE2385ECB459800E /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D05BC49DF6A745DDF9927 /* AppModel.swift */; };
+		ADC1A48B88F18FF4F6CC6FCE /* Catalogue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4BF46D00ACD9697E09C391 /* Catalogue.swift */; };
+		C6696071CBF3DED11C69B42A /* MediaHouseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8D8FC694A571FA1FF84435 /* MediaHouseApp.swift */; };
+		DA3F631D93F70CD500B3CE2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF07D841AB02CB2E156B38C /* Foundation.framework */; };
+		E7E7C2C40BBCEF42698A0C24 /* Screens.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63FAFB128BF871C802CA2E4 /* Screens.swift */; };
+		F31009B5A0E569204E82B6B2 /* MediaSDK in Frameworks */ = {isa = PBXBuildFile; productRef = B47A0A6F2149533FD1CEEBC9 /* MediaSDK */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1F4BF46D00ACD9697E09C391 /* Catalogue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Catalogue.swift; sourceTree = "<group>"; };
+		24974E5D6DFF9B2144B44352 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		372C327D5F3EA2CDEE0E94E7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80A2450710578547BCD30757 /* MediaHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C8D8FC694A571FA1FF84435 /* MediaHouseApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MediaHouseApp.swift; sourceTree = "<group>"; };
+		8FF07D841AB02CB2E156B38C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		9AEC9770C98C9AB24B4AF15C /* catalogue.json */ = {isa = PBXFileReference; includeInIndex = 1; path = catalogue.json; sourceTree = "<group>"; };
+		9B27CEBA289FE39FF5395107 /* Tiles.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Tiles.swift; sourceTree = "<group>"; };
+		AB3D05BC49DF6A745DDF9927 /* AppModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		B5A17D535F52283BB4ABDB7E /* MediaHouse.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MediaHouse.xcconfig; sourceTree = "<group>"; };
+		E21EC5566E7F714A57E8A45D /* Components.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		F63FAFB128BF871C802CA2E4 /* Screens.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Screens.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFC8CAC29AF08C15D4445585 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA3F631D93F70CD500B3CE2F /* Foundation.framework in Frameworks */,
+				F31009B5A0E569204E82B6B2 /* MediaSDK in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4782BB86B30735582531A4F0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8FF07D841AB02CB2E156B38C /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5CE6BFE5A2267E5A9FA0FB32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4782BB86B30735582531A4F0 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C9A92FDFA363883472B7BB0 /* MediaHouse */ = {
+			isa = PBXGroup;
+			children = (
+				8C8D8FC694A571FA1FF84435 /* MediaHouseApp.swift */,
+				AB3D05BC49DF6A745DDF9927 /* AppModel.swift */,
+				1F4BF46D00ACD9697E09C391 /* Catalogue.swift */,
+				E21EC5566E7F714A57E8A45D /* Components.swift */,
+				9B27CEBA289FE39FF5395107 /* Tiles.swift */,
+				F63FAFB128BF871C802CA2E4 /* Screens.swift */,
+				24974E5D6DFF9B2144B44352 /* Assets.xcassets */,
+				9AEC9770C98C9AB24B4AF15C /* catalogue.json */,
+				372C327D5F3EA2CDEE0E94E7 /* Info.plist */,
+			);
+			name = MediaHouse;
+			path = MediaHouse;
+			sourceTree = "<group>";
+		};
+		C1BED35637D9164AF0B50FA8 = {
+			isa = PBXGroup;
+			children = (
+				C9DBEF24365CB89B679740C4 /* Products */,
+				5CE6BFE5A2267E5A9FA0FB32 /* Frameworks */,
+				FA3F195F3480CD0BDE309F8F /* Config */,
+				9C9A92FDFA363883472B7BB0 /* MediaHouse */,
+			);
+			sourceTree = "<group>";
+		};
+		C9DBEF24365CB89B679740C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80A2450710578547BCD30757 /* MediaHouse.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA3F195F3480CD0BDE309F8F /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				B5A17D535F52283BB4ABDB7E /* MediaHouse.xcconfig */,
+			);
+			name = Config;
+			path = Config;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B3C78E9737A33B28A0CC5E6A /* MediaHouse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A86D2827555F4145CF603AF /* Build configuration list for PBXNativeTarget "MediaHouse" */;
+			buildPhases = (
+				EF619D055CE09E6D13BCACCF /* Sources */,
+				EFC8CAC29AF08C15D4445585 /* Frameworks */,
+				2B717B61B8B727851CF7C4B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MediaHouse;
+			packageProductDependencies = (
+				B47A0A6F2149533FD1CEEBC9 /* MediaSDK */,
+			);
+			productName = MediaHouse;
+			productReference = 80A2450710578547BCD30757 /* MediaHouse.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3556F1DF48F631326D9158FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = C68C28521BB0FFC7C9E7D6E1 /* Build configuration list for PBXProject "MediaHouse" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C1BED35637D9164AF0B50FA8;
+			minimizedProjectReferenceProxies = 0;
+			packageReferences = (
+				8276C3B4BD286367E96AD114 /* XCRemoteSwiftPackageReference "Atunwa-Media-Player-Integration-Guide" */,
+			);
+			preferredProjectObjectVersion = 100;
+			productRefGroup = C9DBEF24365CB89B679740C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B3C78E9737A33B28A0CC5E6A /* MediaHouse */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B717B61B8B727851CF7C4B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A36B042C0A40A5D307A50DF2 /* Assets.xcassets in Resources */,
+				7B26B2A63D19E29982B7573B /* catalogue.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF619D055CE09E6D13BCACCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6696071CBF3DED11C69B42A /* MediaHouseApp.swift in Sources */,
+				A66EDA64DE2385ECB459800E /* AppModel.swift in Sources */,
+				ADC1A48B88F18FF4F6CC6FCE /* Catalogue.swift in Sources */,
+				40A353A5566BCD74C4AE588F /* Components.swift in Sources */,
+				03558E4A2C176D1966B4635A /* Tiles.swift in Sources */,
+				E7E7C2C40BBCEF42698A0C24 /* Screens.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		30204B681625767FE967EE98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		49D0068D90CF40908A087697 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5A17D535F52283BB4ABDB7E /* MediaHouse.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MediaHouse/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atunwadigital.examples.mediahouse;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B4D295583FEE604966D58476 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5A17D535F52283BB4ABDB7E /* MediaHouse.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MediaHouse/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atunwadigital.examples.mediahouse;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B8195122FB3A792615A828C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A86D2827555F4145CF603AF /* Build configuration list for PBXNativeTarget "MediaHouse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4D295583FEE604966D58476 /* Release */,
+				49D0068D90CF40908A087697 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C68C28521BB0FFC7C9E7D6E1 /* Build configuration list for PBXProject "MediaHouse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30204B681625767FE967EE98 /* Debug */,
+				B8195122FB3A792615A828C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8276C3B4BD286367E96AD114 /* XCRemoteSwiftPackageReference "Atunwa-Media-Player-Integration-Guide" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/atunwadigital/Atunwa-Media-Player-Integration-Guide.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B47A0A6F2149533FD1CEEBC9 /* MediaSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8276C3B4BD286367E96AD114 /* XCRemoteSwiftPackageReference "Atunwa-Media-Player-Integration-Guide" */;
+			productName = MediaSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 3556F1DF48F631326D9158FD /* Project object */;
+}

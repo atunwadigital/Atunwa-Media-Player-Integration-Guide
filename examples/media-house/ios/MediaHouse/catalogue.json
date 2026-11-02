@@ -1,0 +1,77 @@
+{
+  "_comment": "Demo on-demand content for the Media House example. The SDK serves live stations and news from the Atunwa dashboard; on-demand videos and podcasts come from your own CMS. These are public test streams (Mux, Apple and SoundHelix) standing in for it.",
+  "videos": [
+    {
+      "id": "vod-bbb",
+      "title": "Big Buck Bunny",
+      "show": "Weekend Movie",
+      "summary": "A giant rabbit takes on three bullies in this classic open movie.",
+      "durationSeconds": 596,
+      "color": "#2E7D32",
+      "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
+    },
+    {
+      "id": "vod-tos",
+      "title": "Tears of Steel",
+      "show": "Sci-Fi Sunday",
+      "summary": "A group of warriors and scientists gather in Amsterdam to save the world.",
+      "durationSeconds": 734,
+      "color": "#37474F",
+      "url": "https://test-streams.mux.dev/tos_ismc/main.m3u8"
+    },
+    {
+      "id": "vod-bipbop-advanced",
+      "title": "Studio Test Card",
+      "show": "Behind the Scenes",
+      "summary": "How our engineers check every stream before it goes on air.",
+      "durationSeconds": 1800,
+      "color": "#6A1B9A",
+      "url": "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8"
+    },
+    {
+      "id": "vod-bipbop-16x9",
+      "title": "Signal Check",
+      "show": "Behind the Scenes",
+      "summary": "A short look at adaptive streaming, from 240p to full HD.",
+      "durationSeconds": 1800,
+      "color": "#AD1457",
+      "url": "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8"
+    }
+  ],
+  "podcasts": [
+    {
+      "id": "pod-morning",
+      "title": "The Morning Brief",
+      "host": "Newsroom",
+      "summary": "The day's top stories in fifteen minutes, every weekday.",
+      "color": "#E65100",
+      "episodes": [
+        { "id": "pod-morning-3", "title": "Markets, matatus and the new budget", "published": "2026-10-30", "durationSeconds": 372, "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" },
+        { "id": "pod-morning-2", "title": "What the rains mean for farmers", "published": "2026-10-29", "durationSeconds": 425, "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" },
+        { "id": "pod-morning-1", "title": "Inside the county assemblies", "published": "2026-10-28", "durationSeconds": 344, "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" }
+      ]
+    },
+    {
+      "id": "pod-sports",
+      "title": "Full Time",
+      "host": "Sports Desk",
+      "summary": "Match reactions, transfer talk and the stories behind the scores.",
+      "color": "#1565C0",
+      "episodes": [
+        { "id": "pod-sports-2", "title": "Derby day: the inside story", "published": "2026-10-27", "durationSeconds": 302, "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" },
+        { "id": "pod-sports-1", "title": "Marathon season starts here", "published": "2026-10-20", "durationSeconds": 372, "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" }
+      ]
+    },
+    {
+      "id": "pod-culture",
+      "title": "Sauti",
+      "host": "Arts & Culture",
+      "summary": "Conversations with the musicians, writers and artists shaping the region.",
+      "color": "#00838F",
+      "episodes": [
+        { "id": "pod-culture-2", "title": "Benga's new generation", "published": "2026-10-25", "durationSeconds": 425, "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" },
+        { "id": "pod-culture-1", "title": "Writing in your mother tongue", "published": "2026-10-18", "durationSeconds": 344, "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" }
+      ]
+    }
+  ]
+}
