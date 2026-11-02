@@ -1,0 +1,10 @@
+// Atunwa settings. Don't put keys here: copy Atunwa.local.xcconfig.example to
+// Atunwa.local.xcconfig (git-ignored) and set them there.
+ATUNWA_APP_MODE = single
+ATUNWA_PLAYER_KEY =
+ATUNWA_PUBLISHER_SDK_KEY =
+// Your Ad Manager app ID, from Inventory › Apps in Ad Manager. Left empty, the SDK uses Google's
+// sample app ID and logs a warning. Set yours (in Atunwa.local.xcconfig) before you ship.
+GAD_APPLICATION_IDENTIFIER =
+
+#include? "Atunwa.local.xcconfig"

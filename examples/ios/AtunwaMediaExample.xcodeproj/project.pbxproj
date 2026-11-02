@@ -1,0 +1,385 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		411D7F30463CE2240E667911 /* Playback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF98ADB4B25AD45D86D3375 /* Playback.swift */; };
+		4363678B0FF8ADDA6046E9B2 /* AtunwaMediaExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F08552A6F6E82EA3A44A73C /* AtunwaMediaExampleApp.swift */; };
+		47DBC46476CFBA79018A5EEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D8EAC1A4F57D0C56331FC53 /* Foundation.framework */; };
+		4F0C5F510ADCDF90E77EAC5F /* AtunwaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DBF7C37CD3FAAF2BE637FB /* AtunwaConfig.swift */; };
+		66DFF7255634773AA71E3DAE /* MediaSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 9F37C6AA1DEC72F4346939E7 /* MediaSDK */; };
+		79478075DEEAD3A5D8A042D1 /* PublisherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B5DE4A8380EEFA3F45F78A /* PublisherView.swift */; };
+		85505E5EED28B6C996C51A68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93F7115F719416A116FBEEF3 /* Assets.xcassets */; };
+		868E5D6ACC8018E0E75D49C1 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D49F5CA73347DCAC30331FC /* Components.swift */; };
+		C63D12374FA8EE3E689F6B01 /* SinglePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0031C4F5B4EE41F970A97E57 /* SinglePlayerView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0031C4F5B4EE41F970A97E57 /* SinglePlayerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SinglePlayerView.swift; sourceTree = "<group>"; };
+		210E8CB42C01EF47E7E61684 /* Atunwa.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Atunwa.xcconfig; sourceTree = "<group>"; };
+		28CF60A000ABCDBA02ED2042 /* AtunwaMediaExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AtunwaMediaExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		36DBF7C37CD3FAAF2BE637FB /* AtunwaConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AtunwaConfig.swift; sourceTree = "<group>"; };
+		3FF98ADB4B25AD45D86D3375 /* Playback.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Playback.swift; sourceTree = "<group>"; };
+		6D49F5CA73347DCAC30331FC /* Components.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		6D8EAC1A4F57D0C56331FC53 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6F08552A6F6E82EA3A44A73C /* AtunwaMediaExampleApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AtunwaMediaExampleApp.swift; sourceTree = "<group>"; };
+		85B5DE4A8380EEFA3F45F78A /* PublisherView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PublisherView.swift; sourceTree = "<group>"; };
+		93F7115F719416A116FBEEF3 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E552D45E1E836018EBB570F4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		406D9B991B36FBE60D7BFB77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47DBC46476CFBA79018A5EEA /* Foundation.framework in Frameworks */,
+				66DFF7255634773AA71E3DAE /* MediaSDK in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0FD2FA99CA1682C3996983C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21FBFD563262CFD3BA7C9231 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		11E4258BB8BB3AA9F1DE3FCD /* AtunwaMediaExample */ = {
+			isa = PBXGroup;
+			children = (
+				6F08552A6F6E82EA3A44A73C /* AtunwaMediaExampleApp.swift */,
+				36DBF7C37CD3FAAF2BE637FB /* AtunwaConfig.swift */,
+				3FF98ADB4B25AD45D86D3375 /* Playback.swift */,
+				0031C4F5B4EE41F970A97E57 /* SinglePlayerView.swift */,
+				85B5DE4A8380EEFA3F45F78A /* PublisherView.swift */,
+				6D49F5CA73347DCAC30331FC /* Components.swift */,
+				93F7115F719416A116FBEEF3 /* Assets.xcassets */,
+				E552D45E1E836018EBB570F4 /* Info.plist */,
+			);
+			name = AtunwaMediaExample;
+			path = AtunwaMediaExample;
+			sourceTree = "<group>";
+		};
+		1A82BEF26201E73177C3962E = {
+			isa = PBXGroup;
+			children = (
+				8143972CCE8E0685F39644D1 /* Products */,
+				0FD2FA99CA1682C3996983C1 /* Frameworks */,
+				863D9B074F4F6680DF7AE144 /* Config */,
+				11E4258BB8BB3AA9F1DE3FCD /* AtunwaMediaExample */,
+			);
+			sourceTree = "<group>";
+		};
+		21FBFD563262CFD3BA7C9231 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6D8EAC1A4F57D0C56331FC53 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		8143972CCE8E0685F39644D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				28CF60A000ABCDBA02ED2042 /* AtunwaMediaExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		863D9B074F4F6680DF7AE144 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				210E8CB42C01EF47E7E61684 /* Atunwa.xcconfig */,
+			);
+			name = Config;
+			path = Config;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7E40DEBFDEF29E45CB97AE8E /* AtunwaMediaExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF205BC80B243B9096DA9C8E /* Build configuration list for PBXNativeTarget "AtunwaMediaExample" */;
+			buildPhases = (
+				634E5122BCC8A122E347030E /* Sources */,
+				406D9B991B36FBE60D7BFB77 /* Frameworks */,
+				88412EAF64AC367E3E4CC0D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AtunwaMediaExample;
+			packageProductDependencies = (
+				9F37C6AA1DEC72F4346939E7 /* MediaSDK */,
+			);
+			productName = AtunwaMediaExample;
+			productReference = 28CF60A000ABCDBA02ED2042 /* AtunwaMediaExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		05AFA5625CE7489BC3A0D849 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = F30D983FFD7C739F66D36B78 /* Build configuration list for PBXProject "AtunwaMediaExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1A82BEF26201E73177C3962E;
+			minimizedProjectReferenceProxies = 0;
+			packageReferences = (
+				5F5A10D93F26914A863DE18B /* XCRemoteSwiftPackageReference "Atunwa-Media-Player-Integration-Guide" */,
+			);
+			preferredProjectObjectVersion = 100;
+			productRefGroup = 8143972CCE8E0685F39644D1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7E40DEBFDEF29E45CB97AE8E /* AtunwaMediaExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		88412EAF64AC367E3E4CC0D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85505E5EED28B6C996C51A68 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		634E5122BCC8A122E347030E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4363678B0FF8ADDA6046E9B2 /* AtunwaMediaExampleApp.swift in Sources */,
+				4F0C5F510ADCDF90E77EAC5F /* AtunwaConfig.swift in Sources */,
+				411D7F30463CE2240E667911 /* Playback.swift in Sources */,
+				C63D12374FA8EE3E689F6B01 /* SinglePlayerView.swift in Sources */,
+				79478075DEEAD3A5D8A042D1 /* PublisherView.swift in Sources */,
+				868E5D6ACC8018E0E75D49C1 /* Components.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0348E8F727C6CA914469713F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		39649A7A8F25A885CF904510 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 210E8CB42C01EF47E7E61684 /* Atunwa.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AtunwaMediaExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atunwadigital.examples.media;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		541D48EBDC8577F1A226FDBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FCA019FFDCFC4B01F820ED6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 210E8CB42C01EF47E7E61684 /* Atunwa.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AtunwaMediaExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atunwadigital.examples.media;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF205BC80B243B9096DA9C8E /* Build configuration list for PBXNativeTarget "AtunwaMediaExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCA019FFDCFC4B01F820ED6B /* Release */,
+				39649A7A8F25A885CF904510 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F30D983FFD7C739F66D36B78 /* Build configuration list for PBXProject "AtunwaMediaExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				541D48EBDC8577F1A226FDBC /* Debug */,
+				0348E8F727C6CA914469713F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5F5A10D93F26914A863DE18B /* XCRemoteSwiftPackageReference "Atunwa-Media-Player-Integration-Guide" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/atunwadigital/Atunwa-Media-Player-Integration-Guide.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9F37C6AA1DEC72F4346939E7 /* MediaSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F5A10D93F26914A863DE18B /* XCRemoteSwiftPackageReference "Atunwa-Media-Player-Integration-Guide" */;
+			productName = MediaSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 05AFA5625CE7489BC3A0D849 /* Project object */;
+}

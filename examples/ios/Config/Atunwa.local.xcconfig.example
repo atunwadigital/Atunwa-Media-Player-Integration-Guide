@@ -1,0 +1,7 @@
+// "single": one station, with a player API key. "publisher": all of a publisher's stations.
+ATUNWA_APP_MODE = single
+ATUNWA_PLAYER_KEY =
+ATUNWA_PUBLISHER_SDK_KEY =
+
+// Your Ad Manager app ID (ca-app-pub-…~…). Without one, the SDK uses Google's sample app ID.
+// GAD_APPLICATION_IDENTIFIER = ca-app-pub-xxxxxxxxxxxxxxxx~xxxxxxxxxx
